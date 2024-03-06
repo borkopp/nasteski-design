@@ -455,16 +455,29 @@ export default defineComponent({
     },
     importImages() {
       const imagesContext = require.context('../assets/imgs/gallery', true, /\.(png|jpe?g|svg)$/);
-      this.galleryImages = imagesContext.keys().map((key: string) => imagesContext(key));
+      this.galleryImages = this.sortImages(imagesContext);
       const imagesOgradi = require.context('../assets/imgs/gallery/ogradi', false, /\.(png|jpe?g|svg)$/);
-      this.galleryOgradi = imagesOgradi.keys().map((key: string) => imagesOgradi(key));
+      this.galleryOgradi = this.sortImages(imagesOgradi);
       const imagesTendi = require.context('../assets/imgs/gallery/tendi', false, /\.(png|jpe?g|svg)$/);
-      this.galleryTendi = imagesTendi.keys().map((key: string) => imagesTendi(key));
+      this.galleryTendi = this.sortImages(imagesTendi);
       const imagesDrugo = require.context('../assets/imgs/gallery/drugo', false, /\.(png|jpe?g|svg)$/);
-      this.galleryDrugo = imagesDrugo.keys().map((key: string) => imagesDrugo(key));
+      this.galleryDrugo = this.sortImages(imagesDrugo);
       const imagesPreview = require.context('../assets/imgs/gallery/preview', false, /\.(png|jpe?g|svg)$/);
       this.galleryPreview = imagesPreview.keys().map((key: string) => imagesPreview(key));
+    },
+    sortImages(imagesContext: any) {
+      const allImages: string[] = imagesContext.keys().map((key: string) => imagesContext(key));
+      allImages.sort((a: string, b: string) => {
+        const dateA: Date | null = new Date(a.match(/\d{4}-\d{2}-\d{2}/)?.[0] || '');
+        const dateB: Date | null = new Date(b.match(/\d{4}-\d{2}-\d{2}/)?.[0] || '');
+        if (dateA && dateB) {
+          return dateB.getTime() - dateA.getTime();
+        }
+        return 0;
+      })
+      return allImages
     }
+
   }
 
 });

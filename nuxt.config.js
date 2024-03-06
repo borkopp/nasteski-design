@@ -6,7 +6,6 @@ export default {
     base: '/nasteski-design/'
   },
 
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Настески Дизајн - Алуминиумски Огради & Тенди',
@@ -20,7 +19,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/nasteski-design/favicon.ico' }
     ]
   },
 
