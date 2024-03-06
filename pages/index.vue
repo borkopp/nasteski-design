@@ -127,25 +127,26 @@
         <div data-aos="fade-up" class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <button @click="toggleGallery"
-          class="mx-auto flex items-center bg-gray-700 text-white font-bold rounded-full my-8 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        <button data-aos="fade-up" @click="toggleGallery"
+          class="mx-auto flex items-center bg-gray-700 text-white font-bold rounded-full my-8 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline galleryButtonHover ">
           Отвори ја галеријата
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 ml-3">
             <path fill-rule="evenodd"
               d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z"
               clip-rule="evenodd" />
           </svg>
-
         </button>
+
         <!-- gallery preview -->
-        <div data-aos="fade-up" class="w-3/4 sm:w-2/5 mx-auto">
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-            <div v-for="image in galleryPreview" :key="image">
-              <img class="object-cover object-center h-full w-full rounded-l" :src="image">
+        <button @click="toggleGallery" class="galleryButtonHover" data-aos="fade-up">
+          <div class="w-3/4 sm:w-2/5 mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div v-for="image in galleryPreview" :key="image">
+                <img class="object-cover object-center h-full w-full rounded-l" :src="image">
+              </div>
             </div>
           </div>
-
-        </div>
+        </button>
       </div>
       <!-- Gallery Modal -->
       <div :class="{ 'hidden': !galleryOpen }"
@@ -186,22 +187,29 @@
             <span class="text-4xl font-medium text-white">Се вчитува...</span>
           </div>
 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            class="hidden md:block w-10 h-10 fixed top-3 left-3 z-20">
+            <path fill-rule="evenodd"
+              d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z"
+              clip-rule="evenodd" />
+          </svg>
+
           <!-- Navbar -->
           <nav
             class="fixed bottom-0 left-0 w-full bg-gradient-to-r from-slate-100 to-slate-300 shadow-lg z-10 md:hidden">
-            <div class="container mx-auto flex justify-center py-2">
+            <div class="container mx-auto flex justify-center py-3">
               <button @click="showAll()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'all' }"
-                class="text-black mx-2 py-1 px-2 font-bold text-md rounded-lg">Сите</button>
+                class="text-black mx-2 py-1 px-2 uppercase font-semibold text-sm rounded-lg">Сите</button>
               <button @click="showOgradi()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'ogradi' }"
-                class="text-black mx-2 py-1 px-2 font-bold text-md rounded-lg">Огради</button>
+                class="text-black mx-2 py-1 px-2 uppercase font-semibold text-sm rounded-lg">Огради</button>
               <button @click="showTendi()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'tendi' }"
-                class="text-black mx-2 py-1 px-2 font-bold text-md rounded-lg">Тенди</button>
+                class="text-black mx-2 py-1 px-2 uppercase font-semibold text-sm rounded-lg">Тенди</button>
               <button @click="showDrugo()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'drugo' }"
-                class="text-black mx-2 py-1 px-2 font-bold text-md rounded-lg">Желатин завеси</button>
+                class="text-black mx-2 py-1 px-2 uppercase font-semibold text-sm rounded-lg">Желатин завеси</button>
             </div>
           </nav>
           <nav
@@ -209,16 +217,17 @@
             <div class="container mx-auto flex justify-center py-4">
               <button @click="showAll()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'all' }"
-                class="text-black mx-4 py-1 px-3 font-bold text-xl rounded-lg ">Сите</button>
+                class="text-black mx-4 py-1 px-3 font-bold text-xl  uppercase  hover:bg-gray-700 hover:text-white rounded-md ">Сите</button>
               <button @click="showOgradi()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'ogradi' }"
-                class="text-black mx-4 py-1 px-3 font-bold text-xl rounded-lg ">Огради</button>
+                class="text-black mx-4 py-1 px-3 font-bold text-xl uppercase  hover:bg-gray-700 hover:text-white rounded-md ">Огради</button>
               <button @click="showTendi()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'tendi' }"
-                class="text-black mx-4  py-1 px-3 font-bold text-xl rounded-lg ">Тенди</button>
+                class="text-black mx-4  py-1 px-3 font-bold text-xl uppercase  hover:bg-gray-700 hover:text-white rounded-md ">Тенди</button>
               <button @click="showDrugo()"
                 :class="{ 'bg-gray-700 transition transform duration-200 ease-in-out scale-105 text-white': currentCategory === 'drugo' }"
-                class="text-black mx-4 py-1 px-3 font-bold text-xl rounded-lg ">Желатин завеси</button>
+                class="text-black mx-4 py-1 px-3 font-bold text-xl uppercase  hover:bg-gray-700 hover:text-white rounded-md ">Желатин
+                завеси</button>
             </div>
           </nav>
 
@@ -259,14 +268,12 @@
         </g>
       </g>
     </svg>
-    <section id="contact" class="container mx-auto text-center pt-12 pb-6 mb-12 ">
-      <h2 class="w-full my-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-center text-black">
+    <section id="contact" class="container mx-auto text-center pb-6 mb-12 ">
+      <h2 class="w-full my-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight pt-32 text-center text-black">
         Контакт
       </h2>
       <div data-aos="fade-up" class="w-full mb-4">
-        <div
-          class="h-1 mx-auto bg-gradient-to-r from-gray-500 to-gray-800 w-32 sm:w-48 md:w-64 opacity-25 my-0 py-0 rounded-t">
-        </div>
+        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
 
       <div class="flex flex-col sm:flex-row justify-center my-12 mx-auto px-4 sm:px-8">
@@ -341,7 +348,7 @@
 
           <div class="mb-3 w-full">
             <label class="block font-medium mb-2 text-black" htmlFor="contactMessage">Порака</label>
-            <textarea placeholder="Напишете ни порака"
+            <textarea placeholder="Пишете ни порака"
               class="px-4 py-2 text-black border rounded-md w-full outline-none font-sans" id="contactMessage"
               v-model="contact.message"></textarea>
           </div>
@@ -494,3 +501,14 @@ onMounted(() => {
   initFlowbite();
 })
 </script>
+
+<style scoped>
+.galleryButtonHover {
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05);
+  }
+}
+</style>

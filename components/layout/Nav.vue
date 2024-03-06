@@ -21,22 +21,18 @@
         id="nav-content">
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li class="mr-3" @click="mobileSidebar = false">
-            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-4" href="#">Почетна</a>
+            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3" href="#">Почетна</a>
           </li>
           <li class="mr-3" @click="mobileSidebar = false">
-            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-4" href="#about">Услуги</a>
+            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3" href="#about">Услуги</a>
           </li>
           <li class="mr-3" @click="mobileSidebar = false">
-            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-4" href="#gallery">Галерија</a>
+            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3" href="#gallery">Галерија</a>
           </li>
           <li class="mr-3" @click="mobileSidebar = false">
-            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-4" href="#contact">Контакт</a>
+            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3" href="#contact">Контакт</a>
           </li>
         </ul>
-        <!-- <button id="navAction"
-          class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-          Action
-        </button> -->
       </div>
     </div>
     <hr class="border-none border-gray-100 opacity-25 my-0 py-0" />
@@ -110,8 +106,4 @@ export default defineComponent({
 
   color: white;
 }
-
-/* .navbar-active ul li a {
-  color: black;
-} */
 </style>
