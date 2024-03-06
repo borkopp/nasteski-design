@@ -3,7 +3,7 @@ export default {
   ssr: false,
 
   router: {
-    base: '/nasteskidesign/'
+    base: '/nasteski-design/'
   },
 
 
