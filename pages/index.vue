@@ -3,23 +3,24 @@
     <LayoutNav />
 
     <div data-aos="fade-up" class="pt-24">
-      <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div class="container xl:mx-0 xl:max-w-none px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <div
           class="flex flex-col w-full justify-center items-center lg:items-start lg:w-2/5 lg:text-left lg:pl-10  text-center">
-          <h1 class="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight mb-8 lg:text-6xl">
+          <h1 class="text-4xl sm:text-4xl xl:text-7xl md:text-5xl font-bold leading-tight mb-8 lg:text-6xl">
             Алуминиумски <br /> огради & тенди
           </h1>
-          <p class="text-lg md:text-xl leading-normal mb-4 mx-4 md:mx-0 lg:mb-8">
-            Професионална изработка на алуминиумски огради и тенди по мера од различни профили
+          <p class="text-lg md:text-xl xl:text-2xl leading-normal mb-4 mx-4 md:mx-0 lg:mb-8">
+            Професионална изработка на алуминиумски <br class="hidden xl:block" /> огради и тенди по мера од различни
+            профили <br class="hidden xl:block" />
             на
             приватни и деловни
             објекти.
           </p>
           <a href="#about"
-            class="flex items-center bg-white text-gray-800 font-bold rounded-full my-4 sm:my-6 py-3 mb-32 px-6 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+            class="flex items-center xl:py-6 xl:px-10 xl:text-2xl bg-white text-gray-800 font-bold rounded-full my-4 sm:my-6 py-3 mb-32 px-6 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Дознај повеќе
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-5 h-5 ml-2">
+              stroke="currentColor" class="w-5 h-5 ml-2 xl:w-7 xl:h-7">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
             </svg>
           </a>
@@ -56,19 +57,20 @@
       </svg>
     </div>
     <section id="about" class="bg-white border-b py-8">
-      <div class="container max-w-5xl mx-auto m-8">
-        <h2 data-aos="fade-up" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+      <div class="container  max-w-5xl mx-auto m-8">
+        <h2 data-aos="fade-up"
+          class="w-full my-2 xl:text-6xl text-5xl font-bold leading-tight text-center text-gray-800">
           Услуги
         </h2>
         <div data-aos="fade-up" class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <div data-aos="fade-up-right" class="flex flex-wrap">
+        <div data-aos="fade-up-right" class="flex flex-wrap xl:mb-6 ">
           <div class="w-5/6 sm:w-1/2 p-6">
-            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-6">
+            <h3 class="text-3xl text-gray-800 xl:text-4xl font-bold leading-none mb-6">
               Алуминиумски огради
             </h3>
-            <p class="text-gray-600 mb-8 ">
+            <p class="text-gray-600 mb-8 xl:text-lg ">
               Професионална изработка на алуминиумски огради по мера од различни профили на приватни и деловни објекти.
               <br />
               <br />
@@ -86,19 +88,22 @@
 
           </div>
           <div class="sm:w-1/2 px-6">
-            <img class="w-full" src="../assets/imgs/info-ogradi.png" alt="">
+            <img class="w-full xl:h-full" src="../assets/imgs/info-ogradi.png" alt="">
           </div>
         </div>
-        <div data-aos="fade-up-left" class="flex flex-wrap flex-col-reverse sm:flex-row">
+        <!-- <div data-aos="fade-up" class="w-full mb-4">
+          <div class="h-1 mx-auto gradient lg:my-10 w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div> -->
+        <div data-aos="fade-up-left" class="flex flex-wrap flex-col-reverse sm:flex-row xl:mb-6">
           <div class="w-full sm:w-1/2 p-6 mt-6">
-            <img class="w-full" src="../assets/imgs/info-tendi.png" alt="">
+            <img class="w-full xl:h-full" src="../assets/imgs/info-tendi.png" alt="">
           </div>
           <div class="w-full sm:w-1/2 p-6 mt-6">
             <div class="align-middle">
-              <h3 class="text-3xl text-gray-800 font-bold leading-none mb-6">
+              <h3 class="text-3xl xl:text-4xl text-gray-800 font-bold leading-none mb-6">
                 Тенди
               </h3>
-              <p class="text-gray-600 mb-8">
+              <p class="text-gray-600 xl:text-lg mb-8">
                 Изработка на тенди по мера на приватни и деловни простори на тераси/влезови.
                 <br />
                 <br />
@@ -117,18 +122,49 @@
             </div>
           </div>
         </div>
+        <!-- <div data-aos="fade-up" class="w-full mb-4">
+          <div class="h-1 mx-auto gradient lg:my-10 w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div> -->
+        <div data-aos="fade-up-right" class="flex flex-wrap">
+          <div class="w-5/6 sm:w-1/2 p-6">
+            <h3 class="text-3xl text-gray-800 xl:text-4xl font-bold leading-none mb-6">
+              Желатин завеси
+            </h3>
+            <p class="text-gray-600 mb-8 xl:text-lg ">
+              Професионална изработка на желатин завеси според вашите потреби и мери.
+              <br />
+              <br />
+              Нашите желатин завеси се совршено решение за заштита на отворени простории за време на ладниот зимски
+              период.
+              <br />
+              <br />
+              Ова практично решение ви овозможува да уживате во удобноста на отворени простории, без да се изложувате на
+              непријатно време како дожд, снег, прав и други непријатности.
+              <br />
+              <br />
+              Нашите завеси се изработени од квалитетни материјали кои гарантираат трајност и ефикасност, штитејќи ги
+              вас и вашиот простор од негативните влијанија на временските услови.
+            </p>
+
+          </div>
+          <div class="sm:w-1/2 px-6">
+            <img class="w-full xl:h-full" src="../assets/imgs/info-zavesi.png" alt="">
+          </div>
+        </div>
+
       </div>
     </section>
     <section id="gallery" class="bg-gray-100 py-8">
       <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-        <h2 data-aos="fade-up" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        <h2 data-aos="fade-up"
+          class="w-full my-2 text-5xl xl:text-6xl font-bold leading-tight text-center text-gray-800">
           Галерија
         </h2>
         <div data-aos="fade-up" class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <button data-aos="fade-up" @click="toggleGallery"
-          class="mx-auto flex items-center bg-gray-700 text-white font-bold rounded-full my-8 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline galleryButtonHover ">
+          class="mx-auto flex items-center xl:my-10 xl:py-4 xl:px-8 xl:text-xl bg-gray-700 text-white font-bold rounded-full my-8 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline galleryButtonHover ">
           Отвори ја галеријата
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 ml-3">
             <path fill-rule="evenodd"
@@ -138,15 +174,16 @@
         </button>
 
         <!-- gallery preview -->
-        <button @click="toggleGallery" class="galleryButtonHover" data-aos="fade-up">
-          <div class="w-3/4 sm:w-2/5 mx-auto">
+
+        <div class="w-3/5 rounded-lg sm:w-2/5 xl:w-3/6 mx-auto">
+          <button @click="toggleGallery" class="galleryButtonHover" data-aos="fade-up">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div v-for="image in galleryPreview" :key="image">
-                <img class="object-cover object-center h-full w-full rounded-l" :src="image">
+                <img class="object-cover object-center h-full w-full rounded-lg" :src="image">
               </div>
             </div>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <!-- Gallery Modal -->
       <div :class="{ 'hidden': !galleryOpen }"
@@ -269,7 +306,8 @@
       </g>
     </svg>
     <section id="contact" class="container mx-auto text-center pb-6 mb-12 ">
-      <h2 class="w-full my-2 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight pt-32 text-center text-black">
+      <h2
+        class="w-full my-2 text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight pt-18 text-center text-black">
         Контакт
       </h2>
       <div data-aos="fade-up" class="w-full mb-4">
@@ -286,7 +324,7 @@
                 clip-rule="evenodd" />
             </svg>
             <div class="ml-4">
-              <p class="text-lg font-medium">{{ phoneNumber2 }}</p>
+              <p class="text-lg font-sans font-medium">{{ phoneNumber2 }}</p>
             </div>
           </a>
           <a :href="`tel:${phoneNumber1}`" class="flex items-center rounded-xl p-4 text-black hover:bg-white">
@@ -296,7 +334,7 @@
                 clip-rule="evenodd" />
             </svg>
             <div class="ml-4">
-              <p class="text-lg font-medium">{{ phoneNumber1 }}</p>
+              <p class="text-lg font-sans font-medium">{{ phoneNumber1 }}</p>
             </div>
           </a>
 
@@ -308,7 +346,7 @@
               </path>
             </svg>
             <div class="ml-4">
-              <p class="text-lg font-medium">DOOEL Nasteski Dizajn</p>
+              <p class="text-lg font-sans font-medium">DOOEL Nasteski Dizajn</p>
             </div>
           </a>
           <a href="https://www.instagram.com/nasteski_design/"
@@ -326,7 +364,7 @@
               </g>
             </svg>
             <div class="ml-4">
-              <p class="text-lg font-medium">nasteski_design</p>
+              <p class="text-lg font-sans font-medium">nasteski_design</p>
             </div>
           </a>
 
@@ -510,5 +548,6 @@ onMounted(() => {
     transition: transform 0.3s ease-in-out;
     transform: scale(1.05);
   }
+
 }
 </style>

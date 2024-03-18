@@ -1,10 +1,11 @@
 <template>
   <nav id="header" class="fixed w-full z-30 top-0 text-white">
-    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+    <div
+      class="w-full xl:mx-0 xl:max-w-none xl:text-lg container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
       <div class="pl-4 flex items-center">
         <a href="#">
           <!-- <img v-if="scrollY === 0" src="../../assets/imgs/logo-white.png" class="h-12 ml-4" alt=" logo"> -->
-          <img src="../../assets/imgs/logo-black.png" class="h-12 ml-4" alt="">
+          <img src="../../assets/imgs/logo-black.png" class="h-12 ml-4  xl:h-16" alt="">
         </a>
       </div>
       <div class="block lg:hidden pr-4">
@@ -27,7 +28,8 @@
             <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3" href="#about">Услуги</a>
           </li>
           <li class="mr-3" @click="mobileSidebar = false">
-            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3" href="#gallery">Галерија</a>
+            <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3 lg:px-2"
+              href="#gallery">Галерија</a>
           </li>
           <li class="mr-3" @click="mobileSidebar = false">
             <a class="inline-block uppercase no-underline font-medium navHover py-2 px-3" href="#contact">Контакт</a>
